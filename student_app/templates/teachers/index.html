@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Index</title>
+</head>
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope=“col”>ID</th>
+                <th scope="col">Prenom</th>
+                <th scope="col">Nom</th>
+            </tr>
+        </thead>
+        <div>
+        {% for teacher in teachers %}
+            <tbody>
+                <tr>
+                    <th scope=“col”>{{ teacher.id }}</th>
+                    <td scope="row">
+                        <a href="{% url 'university:teacher' teacher.id %}">{{ teacher.prenom }}</a>
+                    </td>
+                    <td scope="row">{{ teacher.nom }}</td>
+                </tr>
+        {% endfor %}
+        </div>
+</body>
+</html>

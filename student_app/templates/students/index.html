@@ -11,8 +11,8 @@
                      <div class=“card mt-5">
                         {% for student in students %}
                         <div class=“list-group-item list-group-item-action”>
-                            <a href="{% url 'student_app:student' student.id %}" class="list-group-item list-group-item-action">Click</a>
-                            {{student.first_name}}
+                            <a href="{% url 'student_app:student' student.id %}" class="list-group-item list-group-item-action">Cliquez</a><br>
+                            {{student.first_name}}<hr>
                         </div>
                         {% endfor %}
     </div>
